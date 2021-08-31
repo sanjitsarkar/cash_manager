@@ -50,9 +50,19 @@ body{
             cursor: pointer;
             color:white;
             background:$color_secondary;
+            transition: all .2s ease-in-out;
+            &:hover{
+               color:$color_primary;
+               background:white;
+            }
         }
 
         input{
+            transition: all .2s ease-in-out;
+
+            &:focus{
+                background: darken($color_light_white,5);
+            }
             width:15rem;
             &::placeholder{
                 color:rgba(0, 0, 0, 0.603);

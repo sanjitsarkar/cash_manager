@@ -58,11 +58,24 @@ body {
   cursor: pointer;
   color: white;
   background: #dd0268;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.App form button:hover {
+  color: #00abee;
+  background: white;
 }
 
 .App form input {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   width: 15rem;
   background: rgba(255, 255, 255, 0.692);
+}
+
+.App form input:focus {
+  background: rgba(242, 242, 242, 0.692);
 }
 
 .App form input::-webkit-input-placeholder {
