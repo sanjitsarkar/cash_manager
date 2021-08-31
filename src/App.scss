@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$color_secondary:rgb(221, 2, 104);
+$color_primary:rgb(0, 171, 238);
+$color_light_white:rgba(255, 255, 255, 0.692);
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+
+
+    background-color:$color_primary;
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    h1{
+        text-transform: uppercase;
+
+        color:white;
+        text-align: center;
+
+    }
+    p{
+        text-align: center;
+        margin-top: .5rem;
+        font-size: 1.2rem;
+        color:rgba(255, 255, 255, 0.897);
+    }
+    form{
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+
+        display: flex;
+        gap:.5rem;
+       
+        
+        input,button{
+        border-radius: .2rem;
+
+            padding: .7rem;
+            outline: none;
+            border: none;
+        }
+        button{
+            cursor: pointer;
+            color:white;
+            background:$color_secondary;
+        }
+
+        input{
+            width:15rem;
+            &::placeholder{
+                color:rgba(0, 0, 0, 0.603);
+            }
+            background:$color_light_white; 
+        }
+        @media screen and (max-width:600px) {
+            flex-direction: column;
+            // align-items: center;
+            // justify-content: center;
+            input{
+                width:100%;
+            }
+            &>*{
+                width: 85vw;
+
+            }
+        }
+    }
+    h3{
+        margin-top: 10vh;
+        color:white;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    h2{
+        background: rgb(255, 255, 255);
+        padding: .5rem 2rem;
+        
+        text-align: center;
+        color:$color_secondary;
+        font-size: 1rem;
+        font-weight: 400;
+        border-radius: .2rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.205);
+    }
+    table{
+        width: 90vw;
+        border: none;
+        tr{
+            
+        th,td{
+        border-radius: .2rem;
+
+            padding: .5rem;
+
+        }
+        th{
+            color:rgba(0, 0, 0, 0.698);
+            background-color: rgba(255, 255, 255, 0.883);
+
+        }
+        td{
+            background-color: $color_light_white;
+
+        }
+    }
+    }
+}
