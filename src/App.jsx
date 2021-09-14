@@ -45,57 +45,59 @@ function App() {
   // //  console.log(noOfNotes)
   // }, )
   return (
-    <div className="App">
-      <h1>Cash Register Manager</h1>
-      <p>
-        Enter the bill amount and cash given by the customer and know minimum
-        number of notes to return.
-      </p>
-      <form onSubmit={(e) => check(e)}>
-        <input
-          min="1"
-          type="number"
-          onChange={(e) => setBillAmount(e.target.value)}
-          placeholder="Bill Amount"
-        />
-        <input
-          min="0"
-          type="number"
-          onChange={(e) => setCashAmount(e.target.value)}
-          placeholder="Cash Given"
-        />
-        <button type="submit">Check</button>
-      </form>
-      {error && <h2>{error}</h2>}
-      <h3>Return Change</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>No of Notes</th>
-            <td>{noOfNotes && noOfNotes[0]}</td>
-            <td>{noOfNotes && noOfNotes[1]}</td>
-            <td>{noOfNotes && noOfNotes[2]}</td>
-            <td>{noOfNotes && noOfNotes[3]}</td>
-            <td>{noOfNotes && noOfNotes[4]}</td>
-            <td>{noOfNotes && noOfNotes[5]}</td>
-            <td>{noOfNotes && noOfNotes[6]}</td>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <th>Note</th>
-            <td>2000</td>
-            <td>500</td>
-            <td>100</td>
-            <td>20</td>
-            <td>10</td>
-            <td>5</td>
-            <td>1</td>
-          </tr>
-        </tfoot>
-      </table>
+    <>
+      <div className="App">
+        <h1>Cash Register Manager</h1>
+        <p>
+          Enter the bill amount and cash given by the customer and know minimum
+          number of notes to return.
+        </p>
+        <form onSubmit={(e) => check(e)}>
+          <input
+            min="1"
+            type="number"
+            onChange={(e) => setBillAmount(e.target.value)}
+            placeholder="Bill Amount"
+          />
+          <input
+            min="0"
+            type="number"
+            onChange={(e) => setCashAmount(e.target.value)}
+            placeholder="Cash Given"
+          />
+          <button type="submit">Check</button>
+        </form>
+        {error && <h2>{error}</h2>}
+        <h3>Return Change</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>No of Notes</th>
+              <td>{noOfNotes && noOfNotes[0]}</td>
+              <td>{noOfNotes && noOfNotes[1]}</td>
+              <td>{noOfNotes && noOfNotes[2]}</td>
+              <td>{noOfNotes && noOfNotes[3]}</td>
+              <td>{noOfNotes && noOfNotes[4]}</td>
+              <td>{noOfNotes && noOfNotes[5]}</td>
+              <td>{noOfNotes && noOfNotes[6]}</td>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Note</th>
+              <td>2000</td>
+              <td>500</td>
+              <td>100</td>
+              <td>20</td>
+              <td>10</td>
+              <td>5</td>
+              <td>1</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
