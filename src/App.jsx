@@ -53,7 +53,7 @@ function App() {
       </p>
       <form onSubmit={(e) => check(e)}>
         <input
-          min="0"
+          min="1"
           type="number"
           onChange={(e) => setBillAmount(e.target.value)}
           placeholder="Bill Amount"
